@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block content %}
+<body>
+    <center>
+    <a href="/pdf" ><button class="btn" style="width:250px;">Resume</button></a>
+    <a href="/" ><button class="btn" style="width:250px;">Search for Job</button></a>
+    <a href="/update" ><button class="btn" style="width:250px;">Update Profile</button></a>
+        <a href="/jobsapplied" ><button class="btn" style="width:250px;">Jobs Applied</button></a>
+        <a href="/feedback"><button class="btn" style="width:250px;">Give Feedback</button></a>
+
+
+        {% for msg in messages %}
+        <script>
+            window.onload= function(){
+            alert('{{msg}}')
+            }
+
+        </script>
+{% endfor %}
+</center>
+</body>
+
+{% endblock %}

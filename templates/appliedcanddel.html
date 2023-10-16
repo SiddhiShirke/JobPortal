@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+
+
+{%block content %}
+
+<body>
+<h1 align="center"> This Is Candidate Details page</h1>
+{% if data %}
+
+<table border="1" align="center">
+
+    <th>Candidate Email</th>
+    <th>See Details</th>
+    <th>Job Title</th>
+    <th>Applied On</th>
+    <th>Send Email About their status</th>
+
+
+
+<!--    <th>Job ID</th>-->
+     {% for i in data %}
+    <tr>
+<!--        <td>{{i.employer_id}}</td>-->
+
+        <td>{{i.candidate}}</a></td>
+
+        <td>{{i.job_title}}</td>
+<!--        <td>{{i.post_id}}</td>-->
+        <td><a href="del/{{i.candidate}}/{{i.post_id}}">Show Details</a></td>
+
+    <td>{{i.applied_date}}</td>
+
+        <td><a href="mail/{{i.post_id}}/{{i.candidate}}/{{i.id}}"><button type="submit"> Send Mail</button></a></td>
+<td><a href="msg/{{i.candidate}}/{{i.id}}"><button type="submit">Message</button></a></td>
+
+</tr>
+
+
+    {% endfor%}
+</table>
+{% else %}
+<h1 align="center"> No one applied yet !!</h1>
+{% endif %}
+<p>
+
+</p>
+</body>
+{% endblock %}
+</html>

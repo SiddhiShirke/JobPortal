@@ -1,0 +1,372 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.checkbtn{
+font-size:30px;
+color:black;
+position:absolute;
+top:0px;
+right:0px;
+line-height:80px;
+margin-right:40px;
+cursor:pointer;
+display:none;
+}
+
+#check{
+display:none;
+}
+
+
+
+
+.thead{
+    height: 50px;
+    width: 200px;
+    background-color:#b80b50;
+    color:black;
+    
+    
+
+}
+    .tdata{
+    height:50px;
+    width:200px;
+    font-weight: 600;
+    text-align: center;
+    }
+.tdata:hover{
+    background-color:#fb7aae;
+}
+
+.img-circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+
+
+}
+
+.box{
+margin:0 auto;
+
+
+padding:20px;
+background:#f9f9f9;
+border:2px solid black;
+box-shadow: 5px 10px 18px #99003d;
+
+      padding: 40px;
+}
+.nav {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#99003d;
+
+
+}
+
+div ol{
+    float:right;
+    margin-right:20px;
+
+}
+
+div ol a {
+  display: inline-block;
+  line-height:80px;
+  margin:0 5px;
+  
+}
+
+
+div ol a li{
+    color:white;
+    font-size:17px;
+    padding:7px 13px;
+    border-radius:3px;
+    text-transform:uppercase;
+   
+}
+
+/* Change the link color to #111 (black) on hover */
+.navlist:hover{
+  background-color:#111 ;
+  transition: .5s;
+  text-decoration: none;
+
+  
+}
+
+
+#find{
+    height: 40px;
+    width: 60%;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 10%;
+
+}
+
+.search-ico {
+    position: absolute;
+
+
+}
+
+.microphone-ico {
+  position: absolute;
+
+
+
+}
+
+.btn{
+    border: 2px;
+    width : 100px;
+    height: 40px;
+    background-color: #cc0066;
+    color: white;
+    border-radius: 30px;
+    border-color: #111;
+
+}
+
+
+
+.choice {
+        background-color: #99003d;
+        padding : 15px;
+        width : 250px;
+        color:white;
+        font-size: x-large;
+        border: 2px solid black ;
+        border-radius: 20px;
+        margin-top: 100px;
+}
+
+
+.apply{
+        background-color:green;
+        width: 100px;
+        height:100px;
+}
+.choice:hover{
+    opacity: 0.75;
+}
+
+.Q{
+    color: #99003d;
+    font-size: xx-large;
+
+}
+
+.name{
+    text-align-last: center;
+
+    font-size: 500%;
+    font-family:cursive;
+}
+
+.login{
+    margin: 50%;
+    width:500px;
+    height 550px;
+    border: 2px;
+}
+
+
+.errorlist{
+    background-color: white;
+    color: black;
+}*/
+ul{
+list-style-type:none;
+}
+
+
+.dashbody{
+    background-color:#cccccc;
+}
+.card{
+    
+    display:inline-block;
+    text-indent: 20px;
+    width:250px;
+    height: 200px;
+    background-color: #f7fdff;
+    margin: 10px;
+    transition: width 2s, height 2s, transform 2s;
+    border-radius:10px;
+    box-shadow: 5px 10px 18px #99003d;
+
+    
+}
+.card:hover{
+    background-color:#dee3e5;
+
+
+}
+#hide{
+    display:none;
+}
+@media (max-width:1200px){
+
+
+.container{
+    display:none;
+}
+#hide{
+    display:block
+}
+
+
+#hide img{
+    max-width:100%;
+    height:auto;
+    width:auto\9;
+    margin-bottom:20px;
+
+}
+
+    a .btn{
+        display:block;
+    }
+
+.card{
+
+    display:block;
+    text-indent: 20px;
+    width:190px;
+    height: 150px;
+
+}
+
+    .img-circle{
+        width: 90px;
+        height:90px;
+       
+    }
+
+    .fa fa-bars{
+        font-size:20px;
+    }
+    .name{
+        font-size: 40px;
+        text-align-last: center;
+    }
+    .checkbtn{
+        display:block;
+    }
+
+
+    ol {
+
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background:#4d001f;
+        left:-100%;
+        transition:all .5s;
+        text-align: center;
+
+
+
+
+    }
+
+    form{
+        overflow: hidden;
+    }
+    
+    
+
+
+    div ol a{
+        display:block;
+        margin:50px 0;
+        line-height: 30px;
+        
+    }
+    div ol a li{
+        font-size:17px;
+        
+    }
+
+
+#check:checked ~ ol {
+    left:0;
+
+}
+
+}
+
+
+
+
+input:checked + .toggle { display: none; }
+
+
+.searchtb th{
+    height:35px;
+    width:150px;
+    background-color:#dee3e5;
+}
+
+.searchcard{
+
+    display:inline-block;
+    /*text-indent: 20px;*/
+    width:100%;
+    height: 220px;
+    background-color: #f7fdff;
+    border-radius:10px;
+    box-shadow: 5px 10px 18px #99003d;
+    font-weight:900;
+    font-family: "Times New Roman";
+
+
+
+}
+.searchcard:hover{
+    background-color:#dee3e5;
+
+
+}
+
+
+
+.profile_height{
+        border-radius:50%;
+        height:180px;
+        width:200px;
+}
+
+.profilecard{
+margin:auto;
+    display:inline-block;
+    /*text-indent: 20px;*/
+    width:400px;
+    height: 450px;
+    background-color: #f7fdff;
+    border-radius:10px;
+    box-shadow: 5px 10px 18px #99003d;
+    font-weight:900;
+    font-family: "Times New Roman";
+    text-align:center;
+
+
+
+}
+.profilecard:hover{
+    background-color:#dee3e5;
+
+
+}

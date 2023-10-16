@@ -1,0 +1,53 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<body>
+<form method="POST">
+    {%csrf_token%}
+{% if obj %}
+<!--<table border="1" align="center" class="searchtb">
+
+
+    <th>Job Title</th>
+    <th>Location</th>
+    <th>Skills Required</th>
+    <th>Salary</th>
+    <th>Monthly / Annually</th>
+    <th>Last Date For Applying</th>
+    <th>Apply For Job</th>
+    <th>Apply</th>
+    {% for opt1 in obj %}
+    <tr>
+    <td>{{opt1.job_title}}</td>
+    <td>{{opt1.location}}</td>
+    <td>{{opt1.skills_required}}</td>
+    <td>{{opt1.salary}}</td>
+        <td>{{opt1.monthly_annually}}</td>
+    <td>{{opt1.last_date_of_applying}}</td>
+    <td>{{opt1.id}}</td>
+        <td><a href="applied/{{opt1.id}}">Apply</a></td>
+    </tr>
+{% endfor %}
+
+{% else %}
+    <h3>No Results Found</h3>
+
+
+{% endif %}
+</table>-->
+ {% for opt1 in obj %}
+    <p class="searchcard">
+
+        Job Title: {{opt1.job_title}} <br>
+        Location: {{opt1.location}} <br>
+        Skills Required: {{opt1.skills_required}} <br>
+        Job Description: {{opt1.job_description}} <br>
+        Salary: {{opt1.salary}} {{opt1.monthly_annually}} <br>
+        Last date for applying: {{opt1.last_date_of_applying}}<br>
+        Working Hours: {{opt1.total_working_hours}}  &nbsp; &nbsp;&nbsp;
+        <a href="applied/{{opt1.id}}" class="btn">Apply</a>
+    </p>
+    {% endfor %}
+</form>
+</body>
+{% endblock %}

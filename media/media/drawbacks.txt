@@ -1,0 +1,11 @@
+	Drawbacks found in the proposed system:
+a.	Giving the contact details to the candidate before applying to the job will make things worse for the recruiter as the recruiter will be overwhelmed by the questions.
+b.	Giving the contact details to the recruiter before the candidate applies to the job will not be appropriate because if the candidate is not willing to work in some firm. So, when the candidate applies to a particular job only then the recruiter will get the candidate’s contact details.
+c.	Deletion of job post or disabling the application process after the deadline of the job application period is a must.
+
+Future Scope:
+By reading this research journal, I have found out some future scope for it which are as follows:
+	Advanced functionalities can be added to the system such as resume building, creating a questionnaire to get the idea of the candidate’s knowledge.
+	Creating a mobile application will further attract more clients to use the system as users prefer mobile applications. One of the reasons to use a mobile application is that it can be accessed offline. As well as the user spends more time on mobile apps.
+	The system can also have a feedback section for the application.
+	Further, the candidates can also have the option to save the job and apply later if it’s relevant.

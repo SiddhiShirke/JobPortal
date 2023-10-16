@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token%}
+Message: <input type="text" name="msg">
+     <button type="submit">SEND</button>
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+
+{%block content %}
+
+<body>
+
+
+<center>
+     <a href="/update" ><button class="btn" style="width:240px;">Update Profile</button></a>
+    <a href="/showdel" ><button class="btn" style="width:240px;">Applied Candidates</button></a>
+        <a href="/posted" ><button class="btn" style="width:240px;">See Jobs Posted</button></a>
+
+        <a href="/jobpost" ><button class="btn" style="width:240px;">Post Jobs</button></a>
+
+    <a href="/delete_jobpost" ><button class="btn" style="width:240px;">Delete Past Job Post</button></a>
+     <a href="/feedback"><button class="btn" style="width:240px;">Give Feedback</button></a>
+</center>
+
+        {% for msg in messages %}
+        <script>
+            window.onload= function(){
+            alert('{{msg}}')
+            }
+
+        </script>
+{% endfor %}
+</body>
+{%endblock %}
+</html>

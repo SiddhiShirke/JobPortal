@@ -1,0 +1,42 @@
+{% extends 'home.html' %}
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Job Praise</title>-->
+<!--     <link rel="stylesheet" href="{% static 'css/style.css'%}"/>-->
+<!--  <link rel = "icon" href ='{% static "images/logo.jpg"%}' type = "image/x-icon">-->
+<!--     <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<!--</head>-->
+{% block content %}
+<body>
+ <ul>
+     <a href="#"><img  src="{% static 'images/logo.jpg'%}" class="img-circle"></a>
+       <h2 class="name"> Job Praise</h2>
+
+
+       <a href=""><li>Services</li></a>
+
+      <a href="/choose"> <li>Register </li></a>
+
+
+       <a href="/chooselogin"> <li>Login</li></a>
+       <a href="/"><li>Home</li></a>
+
+   </ul>
+
+<center>
+    <h2 class="Q">Login As?</h2>
+    <a href="/login"><button class="choice">Job Seeker</button></a>
+    <a href="company/comp_log"><button class="choice"> Employer</button></a>
+</center>
+
+
+</body>
+{% endblock %}
+</html>

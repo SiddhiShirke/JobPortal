@@ -1,0 +1,30 @@
+FORMAT OF JOURNAL
+PRACTICAL NO.
+AIM:
+THEORY : EXPLANATION OFCONCEPT AND EACH FUNCTION eg.) what is negation of image etc.
+CODE:
+OUTPUT :
+
+PRACICAL NO. 1
+#Open An Image
+import matplotlib.image as img
+import matplotlib.pyplot as plt
+image = img.imread('/img2.jpg')
+outputfigure = plt.figure()
+imgplot = plt.imshow(image)
+outputfigure.show()
+
+
+#Practical 2 Negation of an Image
+import matplotlib.image as img
+import matplotlib.pyplot as plt
+image = img.imread('/img2.jpg')
+outputfigure = plt.figure()
+negimg = plt.imshow(image)
+plt.title('Original Image')
+outputfigure.show()
+negativeimage = 255-image
+outputfigure = plt.figure()
+negimg = plt.imshow(negativeimage)
+plt.title('Negative')
+outputfigure.show()

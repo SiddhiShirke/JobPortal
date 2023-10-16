@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+{% load static %}
+{%block content %}
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<body>
+<center>
+     {% if user %}
+<div class ='profilecard'>
+{% if user.upload_photo %}
+
+    <img class= 'profile_height'src="{{user.upload_photo.url}}" alt="Image" ><br>
+    {% endif %}
+    <h1>{{user.name_of_company| upper}}</h1>
+    Contact Number: {{user.contact_number}}<br>
+    Company Email-ID: {{user.company_email_id}}<br>
+    Employer Email-ID: {{user}}
+
+</div>
+
+</center>
+{% else %}
+
+<h1> You have not filled the details</h1>
+<a href="{{link}}">Add Details</a>
+{% endif %}
+{% endblock%}

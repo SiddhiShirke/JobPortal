@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+{% block content %}
+<body>
+{% if posted %}
+<table border="1" align="center">
+    <th style="text-align:center;" class="thead">Job Title</th>
+    <th style="text-align:center;" class="thead">Location</th>
+    <th style="text-align:center;" class="thead">Skills Required</th>
+    <th style="text-align:center;" class="thead">Salary</th>
+    <th style="text-align:center;" class="thead">Last of Applying</th>
+    <th style="text-align:center;" class="thead">Delete Job</th>
+    {% for i in posted %}
+    <tr>
+    <td  class="tdata">{{i.job_title}}</td>
+    <td  class="tdata">{{i.location}}</td>
+    <td  class="tdata">{{i.skills_required}}</td>
+    <td class="tdata">{{i.salary}}</td>
+    <td class="tdata">{{i.last_date_of_applying}}</td>
+        <td class="tdata"><a href="deletejob/{{i.id}}">Delete</a></td>
+    </tr>
+{% endfor %}
+
+</table>
+{% else %}
+<h1> You have not posted anything</h1>
+<a href="/jobpost" ><button class="btn" style="width:250px;">Post Jobs</button></a>
+{% endif %}
+</body>
+{% endblock %}

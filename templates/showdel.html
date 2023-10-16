@@ -1,0 +1,102 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<style>
+    td{
+    font-weight:600;
+
+    }
+</style>
+
+<body>
+
+<h1 align="center">This is user details</h1>
+<!--<a href="% url 'home' %">Go to home</a>-->
+<form method="POST">
+    {% csrf_token %}
+
+    <table border="1">
+
+    <caption style="text-transform:uppercase">{{cand.full_name}} Details</caption>
+<tr>
+    <th>Email-ID</th>
+    <td>{{display.email}}</td>
+</tr>
+        <tr>
+    <th style="width:250px;">Contact Number</th>
+            <td>{{cand.contact_number}}</td></tr>
+        <tr>
+    <th style="width:250px;">Qualification</th>
+            <td>{{cand.qualification}}</td></tr>
+        <tr>
+<th style="width:250px;">Birth -Date</th>
+            <td>{{cand.birth_date}}</td></tr>
+        <tr>
+     {% for i in q%}
+            <th>What are your strengths and weakness?</th>
+
+
+    <td>{{i.q1}}</td>
+        </tr>
+        <tr>
+    <th>Describe your past experience in detail or any project that you have done related to our job profile if not then type N.A.</th>
+            <td>{{i.q2}}</td></tr>
+<tr>
+    <th>When could you start?</th>
+    <td>{{i.q3}}</td></tr>
+
+        <tr>
+    <th>How will you handle stressfull situation. Lets say deadline is near and teammates are not working properly?</th>
+    <td>{{i.q4}}</td></tr>
+
+        <tr>
+    <th>What all things do you consider when you have to be quick while making a decision?</th>
+    <td>{{i.q5}}</td></tr>
+
+        <tr>
+    <th>What are your short terms and long terms goals?</th>
+    <td>{{i.q6}}</td></tr>
+
+
+         {%endfor%}
+        <tr>
+
+
+    <th>Download CV</th>
+             {% if cand.upload_cv %}
+            <td><a href="{{cand.upload_cv.url}}" download='{{cand.upload_cv.url}}'>DOWNLOAD</a> </td>
+             {% else %}
+    <td> CV Not Uploaded</td>
+    {% endif %}
+        </tr>
+
+        <tr>
+    <th>View CV</th>
+              {% if cand.upload_cv %}
+            <td>
+                <a href="{{cand.upload_cv.url}}" target="_blank">View</a></td>
+    {% else %}
+    <td> CV Not Uploaded</td>
+    {% endif %}
+        </tr>
+
+        <tr>
+    <th>Status</th>
+         <td><select style="width:150px;" name="status">
+            <option value=" " selected>{{appliedjobs.status}}</option>
+            <option value="selected">Selected</option>
+            <option value="rejected">Rejected</option>
+            <option value="in-touch">In-Touch</option>
+         </select></td></tr>
+        <tr>
+    <th>SAVE</th>
+            <td><button type="submit">SAVE</button> </td></tr>
+
+
+
+</table>
+
+</form>
+
+</body>
+{% endblock %}

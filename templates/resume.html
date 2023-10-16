@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    body{
+    font-family:"Times New Roman", Times, serif;
+    font-size:larger;
+    }
+    .a {
+  text-transform:uppercase;
+}
+
+
+</style>
+</head>
+<body>
+
+<div>{{more.full_name | capfirst}}</div>
+<hr>
+
+Objective: {{more.objective | default:'To secure employment with a reputable company, where I can utilize my skills and business studies background to the maximum.'}} <br>
+<hr>
+Email Id: {{candidate.email}} <br>
+Contact Number : {{more.contact_number}}<hr>
+
+PERSONAL INFORMATION
+<hr>
+Gender: {{more.gender | capfirst}}<br>
+Born In: {{more.birth_date}} <br>
+Marital Status: {{more.marital_status | capfirst}}<br>
+Hobbies: {{more.hobbies}}
+<br>
+<hr>
+Educational Information<hr>
+Qualification: {{more.qualification}}<br>
+Skilled In {{more.skills}}
+
+
+</body>
+</html>

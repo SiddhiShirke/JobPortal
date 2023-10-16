@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block content %}
+<body>
+{% if applied %}
+<table border="1" align="center">
+    <th style="text-align:center;" class="thead">Job Title</th>
+    <th style="text-align:center;" class="thead">Employer</th>
+    <th style="text-align:center;" class="thead">Status</th>
+     <th style="text-align:center;" class="thead">Applied On</th>
+{% for i in applied %}
+<tr>
+    <td class="tdata">{{i.job_title}}</td>
+     <td class="tdata">{{i.employer}}</td>
+    <td class="tdata">{{i.status}}</td>
+    <td class="tdata">{{i.applied_date}}</td>
+
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<h1>You have not applied to any jobs yet !!!!</h1>
+{% endif %}
+</body>
+
+{% endblock %}

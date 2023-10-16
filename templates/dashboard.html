@@ -1,0 +1,124 @@
+{% extends 'home.html' %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+
+
+</head>
+<body class="dashbody">
+<canvas id="chart"></canvas>
+<!--<div class="box">-->
+<!--  Users: {{count}}-->
+<!--</div>-->
+<br><br>
+<div class="card">
+  NUMBER OF USER
+  <HR>
+  <b>{{usercount}} </b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:green"></i>
+</div>
+
+<div class="card">
+  NUMBER OF CANDIDATES
+  <HR>
+  <b>{{candidate}} </b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:orange"></i>
+</div>
+
+<div class="card">
+  NUMBER OF EMPLOYERS
+  <HR>
+  <b>{{employer}} </b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:pink"></i>
+</div>
+
+
+<div class="card">
+  NUMBER OF COMPANIES
+  <HR>
+  <b>{{company}} </b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:pink"></i>
+</div>
+
+<div class="card">
+  NUMBER OF JOB POST
+  <hr>
+  <b>{{jobcount}}</b> &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:yellow"></i>
+</div>
+
+<div class="card">
+ NUMBER OF JOBS APPLIED
+  <hr>
+  <b>{{countapplied}}</b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:blue"></i>
+</div>
+
+<div class="card">
+ IN-DEMAND JOB ROLE
+  <hr>
+  <b>{{title}}</b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:#ff1dce"></i>
+</div>
+
+<div class="card">
+    MOST JOB OPENING's LOCATION
+  <hr>
+  <b>{{location}}</b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:#008f8f"></i>
+</div>
+
+<!--<div class="card">-->
+<!-- MOST JOB POSTING COMPANY-->
+<!--  <hr>-->
+<!--  <b>{{company.name_of_company}}</b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:#700000"></i>-->
+<!--</div>-->
+
+<div class="card">
+ NO. OF SELECTED CANDIDATES
+
+  <hr>
+  <b>{{select}}</b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:#700000"></i>
+</div>
+
+<div class="card">
+ Top Recruiting Company
+
+  <hr>
+  <b>{{company1.name_of_company}}</b>  &nbsp;&nbsp; <i class="fa fa-area-chart" style="font-size:24px;color:#700000"></i>
+</div>
+
+</body>
+<script>
+var i = [];
+var j =[];
+{% for i,j in cname %}
+
+i.push('{{i}}')
+
+j.push({{j}})
+
+{% endfor %}
+
+console.log(i)
+console.log(j)
+
+
+let ctx = document.getElementById("chart").getContext("2d");
+let chart = new Chart(ctx, {
+  type: "pie",
+  data: {
+	 labels: i,
+	 datasets: [
+		{
+		  label: "Gross volume ($)",
+		  backgroundColor:"#ff66a3",
+		  borderColor: "#417690",
+		  data: j
+		}
+	 ]
+  },
+  options: {
+	 title: {
+		text: "JOB ROLES",
+		display: true
+	 }
+  }
+});
+
+
+</script>
+{% endblock %}
